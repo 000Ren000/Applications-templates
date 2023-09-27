@@ -5,6 +5,9 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="ExternalEvent">ВнешнееСобытие</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -82,7 +85,20 @@
 			<DataPath>Товары</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТоварыКонтекстноеМеню" id="43"/>
-			<AutoCommandBar name="ТоварыКоманднаяПанель" id="44"/>
+			<AutoCommandBar name="ТоварыКоманднаяПанель" id="44">
+				<ChildItems>
+					<Button name="ТоварыПодбор" id="64">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Подбор</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.LevelDown</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ТоварыПодборРасширеннаяПодсказка" id="65"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="45"/>
 			<SearchStringAddition name="ТоварыСтрокаПоиска" id="46">
 				<AdditionSource>
@@ -280,6 +296,7 @@
 					<v8:content>Подбор</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Action>Подбор</Action>
 		</Command>
 	</Commands>
 </Form>
