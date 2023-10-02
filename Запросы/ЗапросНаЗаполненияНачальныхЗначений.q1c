@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<querylist>
+	<query name="ТоварныеОграничения">
+		<text>ВЫБРАТЬ
+	ТоварныеОграничения.Номенклатура КАК Номенклатура,
+	ТоварныеОграничения.Склад КАК Склад,
+	ТоварныеОграничения.СтраховоеКоличествоЗапаса КАК СтраховоеКоличество,
+	ТоварныеОграничения.МинимальноеКоличествоЗапаса КАК МинимальноеКоличество,
+	ТоварныеОграничения.МаксимальноеКоличествоЗапаса КАК МаксимальноеКоличество,
+	ТоварныеОграничения.НормаПотребления КАК НормаПотребления,
+	ТоварныеОграничения.МетодОбеспеченияПотребностей КАК МетодОбеспеченияПотребностей
+ИЗ
+	РегистрСведений.ТоварныеОграничения КАК ТоварныеОграничения
+ГДЕ
+	ТоварныеОграничения.Склад В(&amp;Склад)
+	И ТоварныеОграничения.Номенклатура В(&amp;Номенклатура)
+
+УПОРЯДОЧИТЬ ПО
+	ТоварныеОграничения.Склад,
+	Номенклатура
+</text>
+		<textSQL>
+
+		</textSQL>
+		<planSQL>
+
+		</planSQL>
+		<typeSQL>
+
+		</typeSQL>
+		<parameters>
+			<parameter name="Номенклатура" type="ТаблицаЗначений" colcount="1" rowcount="6">
+				<item nameCol="Номенклатура" row="0" col="0" type="CatalogRef.Номенклатура" length="0" value="9d987a7a-43f6-11ea-8b17-f6148a3b2540"/>
+				<item nameCol="Номенклатура" row="1" col="0" type="CatalogRef.Номенклатура" length="0" value="53ad9e91-4563-11ea-8b17-f6148a3b2540"/>
+				<item nameCol="Номенклатура" row="2" col="0" type="CatalogRef.Номенклатура" length="0" value="dd7b7bb2-07c4-11e8-bb88-f0795961c201"/>
+				<item nameCol="Номенклатура" row="3" col="0" type="CatalogRef.Номенклатура" length="0" value="53ad9e91-4563-11ea-8b17-f6148a3b2540"/>
+				<item nameCol="Номенклатура" row="4" col="0" type="CatalogRef.Номенклатура" length="0" value="8b9661ca-057b-11e8-bb86-f0795961c201"/>
+				<item nameCol="Номенклатура" row="5" col="0" type="CatalogRef.Номенклатура" length="0" value="605cd579-0a62-11e8-bb8d-f0795961c201"/>
+			</parameter>
+			<parameter name="Склад" type="ТаблицаЗначений" colcount="1" rowcount="4">
+				<item nameCol="Склады" row="0" col="0" type="CatalogRef.Склады" length="0" value="4decc0e6-2cdb-11e8-8adc-107b44153997"/>
+				<item nameCol="Склады" row="1" col="0" type="CatalogRef.Склады" length="0" value="92e376b4-071d-11e8-8acc-107b44153997"/>
+				<item nameCol="Склады" row="2" col="0" type="CatalogRef.Склады" length="0" value="8226536c-e353-11e9-8b0e-e0d55e884293"/>
+				<item nameCol="Склады" row="3" col="0" type="CatalogRef.Склады" length="0" value="e2e66b87-d824-11ed-8ec3-e0d55e884293"/>
+			</parameter>
+		</parameters>
+	</query>
+</querylist>
